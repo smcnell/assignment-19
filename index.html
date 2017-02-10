@@ -2,10 +2,91 @@
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="./dist/css/styles.css">
+
 </head>
 <body>
-	<div id="app-container"><h1>I &#10084; u baby shampu</h1></div>
+	<div id="app-container">
+
+	<div class= "navbar-container">
+	<nav class="navbar navbar-default navbar-fixed-top mynavbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img class="logo" src= 'data:image/png;base64,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'</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li> -->
+        <!-- <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li> -->
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left">
+        <div class="form-group">
+          <input type="text" class="form-control mysearch" placeholder="Search Username">
+        </div>
+        <button type="submit" class="btn btn-default mybutton">Search</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li ><a href="#">Pull requests</a></li>
+				<li ><a href="#">Issues</a></li>
+				<li ><a href="#">Gist</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-plus" aria-hidden="true"></i> <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img class="person-icon" src= 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAMAAAAPdrEwAAAAY1BMVEX///8AAACGhob39/f7+/vz8/Oqqqq0tLTw8PDr6+uvr691dXWnp6cYGBhubm4uLi7Q0NBAQECamprZ2dlnZ2eOjo7l5eV7e3s3NzdUVFQhISFPT08NDQ26urpJSUnf39/FxcXvYwgvAAAB9ElEQVRYhe2YCW6DQAxFGXbCzrATGu5/ypKkkdoMdqB/UBuJd4Any7E9nxjGwcHBu2Hb1oxt6/b6ciwqc6YqRulrFFtjM7RncePcDs1k6TJnSSp+kCZSj9l9Et/krgaxVZxV89yXAm6KfYqXzELEJ3RWsoVu3GkzsOiSMgtRYmVPtFkIrGym6LlsxFz3nDoNAPXImYWYAPWJV5/+p9rj1R6gZmcP63XGq5HBvrDD118AtU9ekCsp9NzknDpHzPw2Qg15sY0joN5xZXasWi6+iw9i6GDvNyFGwqkTSC05NZZzbKbsBEwLzIECw4IRdJS5Q17GK1ZFqSs0mdkFpS7QYLZj5jNqotldjZqNoFlWN+ivOOMt3uweec0fBItbk2goek4MrWrO0X35IlKGJI70mI1aOa05Ph53HKXbiaNLHT6rQ21qZbTfQr1fQ3zlY6nU9edCsNvw+Uo/9Oy5MxWLQTitJgc52MGl6oiXYF72rpLBr+x2kLnkk/ugi7LNdkdGIZutH/RhJLdMoj+adCPUxpjj2ll03DJlE+oz57R011Tuu/nqgr+VnrsvK/eG7d47A/9aqiu9BW795QdiFuKDjMU1VPOtbuq2jOy37RpS4sOJTo7rITImnXfXQyRjy8TV5qFep/ZMGI/4wLE0sGw+ODj4Uz4Bsc8bKyBYjJwAAAAASUVORK5CYII='> <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Action</a></li>
+						<li><a href="#">Another action</a></li>
+						<li><a href="#">Something else here</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Separated link</a></li>
+					</ul>
+				</li>
+      </ul>
+    </div>
+  </div>
+</nav>
+	</div>
+
+	<div class= "information-giant">
+
+
+
+
+	</div>
+
+
+
+	</div>
 	<script type="text/javascript" src="./dist/js/app.js"></script>
 </body>
 </html>
