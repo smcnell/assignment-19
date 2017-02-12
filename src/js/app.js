@@ -6,7 +6,7 @@ var forEach = function(arr,cb){for(var i = 0; i < arr.length; i++){ cb(arr[i], i
 // // var concertsEl=document.querySelector(".concerts-container")
 var informationEl= document.querySelector(".information-giant")
 var bigHTMLStr= ''
-var giantRepoSectionHTML= ''
+var repoSectionHTML= ''
 
 //search bar button //
 var inputEl= document.querySelector(".mysearch")
@@ -35,11 +35,11 @@ function createPageTemplate(dataArray1Profile, dataArray2Repo){
 
   `
 
+repoSectionHTML=""
 
 forEach(dataArray2Repo, function(repObj){
-// console.log(repObj)
+console.log(repObj)
 
-  var repoSectionHTML= ''
     repoSectionHTML+= `
 
     <div class= "one-repo">
@@ -50,9 +50,9 @@ forEach(dataArray2Repo, function(repObj){
     </div>
 
 `
-giantRepoSectionHTML+=repoSectionHTML
+
 })
-bigHTMLStr=profileSectionHTML + "<div class='repo-container'>" + giantRepoSectionHTML + "</div>"
+bigHTMLStr=profileSectionHTML + "<div class='repo-container'>" + repoSectionHTML + "</div>"
 // console.log(bigHTMLStr)
 informationEl.innerHTML= bigHTMLStr
 // console.log(repoSectionHTML)
@@ -75,7 +75,6 @@ console.log(inputValue)
 profileName=inputValue
 console.log('hey')
 console.log(profileName)
-// bigHTMLStr=""
 callMyName()
 })
 
