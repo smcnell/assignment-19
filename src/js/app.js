@@ -67,8 +67,8 @@ informationEl.innerHTML= bigHTMLStr
 
 
 var profileName= "smcnell"
-var fetchProfilePromise= $.getJSON(`https://api.github.com/users/${profileName}?access_token=${githubApiKey}`)
-var fetchRepoPromise= $.getJSON(`https://api.github.com/users/${profileName}/repos?access_token=${githubApiKey}`)
+var fetchProfilePromise= $.getJSON(`https://api.github.com/users/${profileName}`)
+var fetchRepoPromise= $.getJSON(`https://api.github.com/users/${profileName}/repos`)
 var inputValue= ""
 
 
@@ -85,8 +85,8 @@ callMyName()
 
 function callMyName(){
   console.log(profileName)
-  fetchProfilePromise= $.getJSON(`https://api.github.com/users/${profileName}?access_token=${githubApiKey}`)
-  fetchRepoPromise= $.getJSON(`https://api.github.com/users/${profileName}/repos?access_token=${githubApiKey}`)
+  fetchProfilePromise= $.getJSON(`https://api.github.com/users/${profileName}`)
+  fetchRepoPromise= $.getJSON(`https://api.github.com/users/${profileName}/repos`)
   console.log(fetchRepoPromise, fetchProfilePromise)
 
 
